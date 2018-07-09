@@ -7,7 +7,6 @@ class Login extends Controller {
     public function index() {
         if ($this->model->checkuser()) {
             header("Location: http://localhost/mvcproject/dashboard");
-            //$this->view->render('dashboard/index');
         } else {
             $this->view->render('login/index', true);
         }

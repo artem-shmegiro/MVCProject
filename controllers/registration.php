@@ -5,7 +5,11 @@ class Registration extends Controller {
     }
     
     public function index() {
-        $this->view->render('registration/index');
+        if ($this->model->checkuser()) {
+            header("Location: http://localhost/mvcproject/dashboard");
+        } else {
+            $this->view->render('registration/index', true);
+        }
     }
     
     public function save() {

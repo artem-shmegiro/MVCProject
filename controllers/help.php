@@ -16,7 +16,6 @@ class Help extends Controller {
             $this->view->render('help/index');
         } else {
             header("Location: http://localhost/mvcproject/login");
-            //$this->view->render('login/index', true);
         }
     }
 }

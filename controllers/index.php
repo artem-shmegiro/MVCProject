@@ -9,7 +9,6 @@ class Index extends Controller {
             $this->view->render('index/index');
         } else {
             header("Location: http://localhost/mvcproject/login");
-            //$this->view->render('login/index', true);
         }
     }
 }

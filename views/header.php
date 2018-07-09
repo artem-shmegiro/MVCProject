@@ -8,13 +8,16 @@
     <title>Main</title>
     <link href="<?php echo URL; ?>public/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo URL; ?>public/css/style.css" rel="stylesheet" type="text/css">
-    <script src="public/js/jquery.js"></script>
+    <script type="text/javascript" src="public/js/jquery.js"></script>
+    <script type="text/javascript" src="public/js/calculator.js"></script>
 </head>
 
 <body>
     <div class="header">
-        <a class="btn btn-primary" href="<?php echo URL; ?>index">Main</a>
-        <a class="btn btn-info" href="<?php echo URL; ?>help">Help</a>
-        <a class="btn btn-info" href="<?php echo URL; ?>dashboard">Calculator</a>
+        <div class="btn-group">
+            <a class="btn btn-primary" href="<?php echo URL; ?>index">Main</a>
+            <a class="btn btn-info" href="<?php echo URL; ?>help">Help</a>
+            <a class="btn btn-info" href="<?php echo URL; ?>dashboard">Calculator</a>
+        </div>
         <a class="btn btn-danger pull-right" href="<?php echo URL; ?>dashboard/logout">Logout</a>
     </div>

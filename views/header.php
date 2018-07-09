@@ -15,9 +15,6 @@
     <div class="header">
         <a class="btn btn-primary" href="<?php echo URL; ?>index">Main</a>
         <a class="btn btn-info" href="<?php echo URL; ?>help">Help</a>
-        <?php if(Session::get('loggedIn') == true):?>
+        <a class="btn btn-info" href="<?php echo URL; ?>dashboard">Calculator</a>
         <a class="btn btn-info" href="<?php echo URL; ?>dashboard/logout">Logout</a>
-        <?php else: ?>
-        <a class="btn btn-info" href="<?php echo URL; ?>login">Login</a>
-        <?php endif; ?>
     </div>

@@ -5,7 +5,7 @@ class Index extends Controller {
     }
     
     public function index() {
-        if ($this->model->checkuser()) {
+        if (Model::checkuser()) {
             $this->view->render('index/index');
         } else {
             header("Location: http://localhost/mvcproject/login");

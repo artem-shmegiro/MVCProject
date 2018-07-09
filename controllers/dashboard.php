@@ -20,7 +20,7 @@ class Dashboard extends Controller {
     }
     
     public function index() {
-        if ($this->model->checkuser()) {
+        if (Model::checkuser()) {
             $this->view->render('dashboard/index');
         } else {
             header("Location: http://localhost/mvcproject/login");

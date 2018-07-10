@@ -23,7 +23,7 @@
             <div class="form-group">
                 <input type="number" name="result" class="form-control" placeholder="Result" disabled>
             </div>
-            <button type="submit" name="send" class="btn btn-warning btn-lg btn-block">Calculate</button>
+            <input type="button" name="send" class="btn btn-warning btn-lg btn-block" value="Calculate">
         </div>
     </div>
 </form>

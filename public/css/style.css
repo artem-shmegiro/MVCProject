@@ -66,3 +66,8 @@ td.rightcol {
     background-color: #8A2BE2;
     border-color: black;
 }
+
+body {
+    background-image: url(../images/fon.jpg);
+    background-attachment: fixed;
+}

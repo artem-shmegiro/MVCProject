@@ -1,19 +1,20 @@
-﻿$(document).ready(function () { // Ждём загрузки страницы	   
+﻿$(document).ready(function () {
 
-    $("input[name=send]").click(function () { // Событие нажатия на кнопку "Расчёт"
-        var action = $("select[name=operation]").val(); // Получаем значение действия, которое нужно выполнить
-        var first = $("input[name=first]").val() * 1; // Переменная первого числа
-        var second = $("input[name=second]").val() * 1; // Переменная второго числа
-        var result; // Переменная результата
-        if (action == '+') { // Если действие - сложение
-            result = first + second; //  складываем
-        } else if (action == '-') { // Если действие вычитание
-            result = first - second; // вычитаем
-        } else if (action == '*') { // Если действие умножение
-            result = first * second; // умножаем
-        } else if (action == '/') { // Если действие деления
-            result = first / second; // делим
+    $("input[name=send]").click(function () {
+        кнопку "Расчёт"
+        var action = $("select[name=operation]").val();
+        var first = $("input[name=first]").val() * 1;
+        var second = $("input[name=second]").val() * 1;
+        var result;
+        if (action == '+') {
+            result = first + second;
+        } else if (action == '-') {
+            result = first - second;
+        } else if (action == '*') {
+            result = first * second;
+        } else if (action == '/') {
+            result = first / second;
         }
-        $("input[name=result]").val(result); // записываем результат
+        $("input[name=result]").val(result);
     });
 });

@@ -1,10 +1,8 @@
 <form>
     <div class="parent">
         <div class="calcul">
-            <div class="form-group">
-                <div class="center">
-                    <h2>Calculator</h2>
-                </div>
+            <div class="center">
+                <h2>Calculator</h2>
             </div>
             <div class="form-group">
                 <input type="number" name="first" class="form-control" placeholder="Enter the first number" required>

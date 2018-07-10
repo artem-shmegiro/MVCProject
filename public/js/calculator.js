@@ -16,5 +16,14 @@
             result = first / second;
         }
         $("input[name=result]").val(result);
+        $.ajax({
+            type: "POST",
+            url: "Save.php",
+            data: jQuery("#form_calcul").serialize(),
+            cache: false,
+            success: function (data) {
+                alert(data);
+            }
+        })
     });
 });

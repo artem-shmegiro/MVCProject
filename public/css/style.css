@@ -70,4 +70,5 @@ td.rightcol {
 body {
     background-image: url(../images/fon.jpg);
     background-attachment: fixed;
+    background-size: 100%;
 }

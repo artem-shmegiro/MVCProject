@@ -15,15 +15,15 @@
             result = first / second;
         }
         $("input[name=result]").val(result);
-        sendAjaxForm('calcul_form', 'libs/save_operations.php');
+        sendAjaxForm('calcul_form', 'libs/save_operations.php', result);
     });
 
-    function sendAjaxForm(form, url) {
+    function sendAjaxForm(form, url, res) {
         $.ajax({
             url: url,
             type: "POST",
             dataType: "html",
-            data: $("#" + form).serialize(),
+            data: $("#" + form).serialize() + "&result=" + res,
             cache: false,
             success: function (data) {
                 alert(data);

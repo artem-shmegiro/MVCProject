@@ -1,4 +1,4 @@
-<form>
+<form id="calcul_form">
     <div class="parent">
         <div class="calcul">
             <div class="center">

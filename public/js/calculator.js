@@ -15,5 +15,19 @@
             result = first / second;
         }
         $("input[name=result]").val(result);
+        sendAjaxForm('calcul_form', 'libs/save_operations.php');
     });
+
+    function sendAjaxForm(form, url) {
+        $.ajax({
+            url: url,
+            type: "POST",
+            dataType: "html",
+            data: $("#" + form).serialize(),
+            cache: false,
+            success: function (data) {
+                alert(data);
+            },
+        });
+    }
 });

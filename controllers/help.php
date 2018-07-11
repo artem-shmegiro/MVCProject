@@ -15,7 +15,7 @@ class Help extends Controller {
         if (Model::checkuser()) {
             $this->view->render('help/index');
         } else {
-            header("Location: http://localhost/mvcproject/login");
+            header("Location: ".URL."login");
         }
     }
 }

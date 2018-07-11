@@ -6,7 +6,7 @@ class Registration extends Controller {
     
     public function index() {
         if (Model::checkuser()) {
-            header("Location: http://localhost/mvcproject/dashboard");
+            header("Location: ".URL."dashboard");
         } else {
             $this->view->render('registration/index', true);
         }

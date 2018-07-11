@@ -1,3 +1,4 @@
 <?php
-  define('URL', 'http://localhost/mvcproject/');
+  $server = $_SERVER['SERVER_NAME'];
+  define('URL', 'http://'.$server.'/mvcproject/');
 ?>

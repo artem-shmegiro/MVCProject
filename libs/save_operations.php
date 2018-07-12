@@ -1,19 +1,15 @@
 <?php
-//include_once('libs/Database.php');
-//if(isset($_POST['first']) && isset($_POST['second'])){
+include_once('Database.php');
+if(isset($_POST['first']) && isset($_POST['second'])){
 $first = $_POST['first'];
 $second = $_POST['second'];
 $operation = $_POST['operation'];  
 $result = $_POST['result'];
-    /*try {
+    try {
         $db = new DB;
-        $db->insert('calculdb', array('NULL',$first,$second,$operation,$result));
+        $db->insert('calculdb', array('NULL',$first,$operation,$second,$result));
     } catch (Exception $e) {
         echo $e->getMessage();
-    }*/
-
-$connection = new mysqli('localhost', 'userregs', '2408', 'register');
-
-$result = mysqli_query($connection, "INSERT INTO calculdb VALUES('NULL','$first','$operation','$second','$result')");
-    
+    }    
+}
 ?>

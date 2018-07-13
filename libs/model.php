@@ -5,7 +5,8 @@ class Model {
     }
     
     public function checkuser() {
-        if (!isset($_SESSION['user_id'])) {
+        Session::init();
+        if (!isset($_SESSION['loggedIn'])) {
             if (isset($_COOKIE['login']) && isset($_COOKIE['password'])) {
                 $login = $_COOKIE['login'];
                 $password = $_COOKIE['password'];
@@ -16,6 +17,7 @@ class Model {
                     $db = new DB;
                     $data = $db->select("id", "userreg", "login='$login' AND password='$password'" );
                     if(empty($data)) {
+                        Session::destroy();
                         return false;
                     } else {
                         Session::init();
@@ -26,6 +28,7 @@ class Model {
                     echo $e->getMessage();
                 }
             } else {
+                Session::destroy();
                 return false;
             }
         } else {

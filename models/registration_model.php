@@ -12,6 +12,8 @@ class Registration_Model extends Model {
         $login = trim($login);
         $email = trim($email);
         $password = trim($password);
+        //password hashing
+        $password = password_hash($password, PASSWORD_DEFAULT);
         try {
             $db = new DB;
             //user validation
@@ -34,3 +36,4 @@ class Registration_Model extends Model {
     }
     
 }
+?>

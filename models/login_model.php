@@ -12,16 +12,21 @@ class Login_Model extends Model {
         $password = trim($password);
         try {
             $db = new DB;
-            $data = $db->select("id", "userreg", "login='$login' AND password='$password'" );
+            $data = $db->select("*", "userreg", "login='$login'");
+            $hash = $data[0][password];
             if(empty($data)) {
                  header('Location: ../login');
             } else {
-                Session::init();
-                Session::set('loggedIn', true);
-                header('Location: ../dashboard');       
-                if ($_POST['save'] == 1) {
-                    setcookie("login", $_POST["login"], time()+(7 * 24 * 60 * 60), "/");
-                    setcookie("password", $_POST["password"], time()+(7 * 24 * 60 * 60), "/");
+                if (password_verify($password, $hash)) {
+                    Session::init();
+                    Session::set('loggedIn', true);
+                    header('Location: ../dashboard');       
+                    if ($_POST['save'] == 1) {
+                        setcookie("login", $_POST["login"], time()+(7 * 24 * 60 * 60), "/");
+                        setcookie("password", $_POST["password"], time()+(7 * 24 * 60 * 60), "/");
+                    }
+                } else {
+                    header('Location: ../login');
                 }
             }
         } catch (Exception $e) {

@@ -18,6 +18,7 @@
             <a class="btn btn-primary" href="<?php echo URL; ?>index">Main</a>
             <a class="btn btn-info" href="<?php echo URL; ?>help">Help</a>
             <a class="btn btn-info" href="<?php echo URL; ?>dashboard">Calculator</a>
+            <a class="btn btn-info" href="<?php echo URL; ?>history">Operations history</a>
         </div>
         <a class="btn btn-danger pull-right" href="<?php echo URL; ?>dashboard/logout">Logout</a>
     </div>

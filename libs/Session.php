@@ -13,8 +13,8 @@ class Session {
    return $_SESSION[$key];
   }
 
-  public static function destroy() {
-   // unset($_SESSION);
+  public static function destroy($key) {
+   unset($_SESSION[$key]);
    session_destroy();
   }
 }

@@ -72,3 +72,12 @@ body {
     background-attachment: fixed;
     background-size: 100%;
 }
+
+.history {
+    color: white;
+    width: 300px;
+    padding: 10px;
+    margin-top: 900px;
+    background: #696969;
+    border-radius: 10px;
+}

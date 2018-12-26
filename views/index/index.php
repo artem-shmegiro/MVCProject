@@ -1,4 +1,4 @@
 <hr>
-<?php 
-echo "HI, FRIEND!";
-?>
+<center>
+    <h1>WELCOME!</h1>
+</center>
